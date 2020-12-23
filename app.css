@@ -66,6 +66,10 @@ p {
   padding-top: 2rem;
 }
 
+.main-header.dark {
+  background-color: var(--dark-bg-pattern);
+}
+
 .main-header .container {
   display: flex;
   flex-direction: column;
@@ -75,6 +79,14 @@ p {
 .main-header .heading {
   border-bottom: 1px solid var(--light-dark-text);
   padding: 1rem 0;
+}
+
+.main-header.dark .heading {
+  border-bottom-color: var(--light-gray-text);
+}
+
+.main-header.dark h1 {
+  color: var(--white);
 }
 
 .heading p {
@@ -128,6 +140,7 @@ p {
   font-weight: bold;
   box-sizing: border-box;
 }
+
 .flipswitch-inner:before {
   content: '';
   padding-left: 12px;
@@ -137,7 +150,7 @@ p {
 .flipswitch-inner:after {
   content: '';
   padding-right: 12px;
-  background-color: red;
+  background: linear-gradient(to right, var(--toggle-dark));
   color: #888888;
   text-align: right;
 }
@@ -153,6 +166,11 @@ p {
   right: 33px;
   transition: all 0.3s ease-in 0s;
 }
+
+.main-header.dark .flipswitch-switch {
+  background: var(--dark-bg);
+}
+
 .flipswitch-cb:checked + .flipswitch-label .flipswitch-inner {
   margin-left: 0;
 }
@@ -162,6 +180,10 @@ p {
 
 main {
   margin-top: -5%;
+}
+
+main.dark {
+  background-color: var(--dark-bg);
 }
 
 .followers {
@@ -179,6 +201,11 @@ main {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   padding: 3rem 0 2rem;
+}
+
+main.dark .followers .card,
+main.dark .overview .card {
+  background-color: var(--dark-card-bg);
 }
 
 .card.facebook {
@@ -216,6 +243,11 @@ main {
   font-weight: 700;
   margin: 0;
   margin-top: 1rem;
+}
+
+main.dark .card .count,
+main.dark .overview .card .stat {
+  color: var(--white);
 }
 
 .card .count-label {
@@ -281,6 +313,11 @@ main {
 
 footer {
   padding: 1rem 0;
+}
+
+footer.dark {
+  background-color: var(--dark-bg);
+  color: var(--white);
 }
 
 .attribution {
