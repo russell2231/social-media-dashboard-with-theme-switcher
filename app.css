@@ -62,7 +62,7 @@ p {
 
 .main-header {
   background-color: var(--light-bg-pattern);
-  height: 30vh;
+  height: 250px;
   padding-top: 2rem;
 }
 
@@ -161,7 +161,7 @@ p {
 }
 
 main {
-  margin-top: -10%;
+  margin-top: -5%;
 }
 
 .followers {
@@ -176,7 +176,27 @@ main {
   text-align: center;
   margin-bottom: 2rem;
   border-radius: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
   padding: 3rem 0 2rem;
+}
+
+.card.facebook {
+  border-top: 7px solid var(--facebook);
+}
+
+.card.twitter {
+  border-top: 7px solid var(--twitter);
+}
+
+.card.instagram {
+  border-top: 7px solid;
+  border-image-source: linear-gradient(to right, var(--instagram));
+  border-image-slice: 1;
+}
+
+.card.youtube {
+  border-top: 7px solid var(--youtube);
 }
 
 .card .platform {
@@ -269,4 +289,46 @@ footer {
 }
 .attribution a {
   color: var(--primary-main);
+}
+
+@media (min-width: 1440px) {
+  .container {
+    width: 80%;
+    max-width: 1200px;
+  }
+
+  .main-header .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .main-header .heading {
+    border-bottom: none;
+  }
+
+  .themeswitch-label {
+    margin-right: 1rem;
+  }
+
+  main {
+    margin-top: -72px;
+  }
+
+  .followers {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    column-gap: 2rem;
+  }
+
+  .overview {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 2rem;
+    row-gap: 1rem;
+  }
+
+  footer {
+    padding-top: 5rem;
+  }
 }
